@@ -33,10 +33,12 @@ Disadvantages:
 From NIH for medical image analysis
 
 Advantages:
-- widely used in research
+- Free
+- Widely used in research
+- Lots of analysis tools and algorithms
 
 Disadvantages:
-- Not so user-friendly
+- Not so user-friendly interface
 
 ![mipav](resources/week_1/mipav.png)
 
