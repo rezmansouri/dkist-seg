@@ -8,7 +8,7 @@ Advantages:
 - Browser based (able to install via `pip`)
 
 Disadvantages:
-- Interpolates output masks (it is not bitwise): preprocessing required
+- Interpolates output masks (it is not bitwise, has weak edges): preprocessing required
 
 ![label studio](resources/week_1/label_studio_ui.png)  
 
