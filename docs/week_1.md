@@ -2,7 +2,7 @@
 
 ## 1. Labeling software for semantic segmentation
 
-### 1.1. Label Studio
+### 1.1. <a href="https://labelstud.io" target="_blank">Label Studio</a>
 Advantages:
 - Free
 - Browser based (able to install via `pip`)
@@ -14,7 +14,7 @@ Disadvantages:
 
 ![label studio out](resources/week_1/label_studio_out.png)  
 
-### 1.2. QuPath
+### 1.2. <a href="https://qupath.github.io" target="_blank">QuPath</a>
 *Software for Bioimage Analysis*
 
 Advantages:
@@ -29,7 +29,7 @@ Disadvantages:
 
 ![qupath out](resources/week_1/qupath_outt.png)  
 
-### 1.3. MIPAV
+### 1.3. <a href="https://mipav.cit.nih.gov" target="_blank">MIPAV</a>
 From NIH for medical image analysis
 
 Advantages:
@@ -42,7 +42,7 @@ Disadvantages:
 
 ![mipav](resources/week_1/mipav.png)
 
-### 1.4. LabKit (plugin from imageJ / Fiji)
+### 1.4. <a href="https://imagej.net/software/fiji/downloads" target="_blank">LabKit (plugin from imageJ / Fiji)</a>
 Advantages:
 - Free
 - Available for windows, macOS, linux
@@ -82,7 +82,11 @@ Disadvantages:
 
     Benchmark dataset used in the original unet
 
+    Nerve cells of flies
+
     ![em](resources/week_1/EM.png)
+
+*More datasets available at <a href="https://arxiv.org/abs/2009.13120" target="_blank">Medical Image Segmentation Using Deep Learning: A Survey</a> paper, page 18.*
 
 | Dataset | # Classes | Dimensions | # Samples | Labeled | Remarks
 |---------|:---------:|---------|---------|---------|---------|
@@ -92,3 +96,11 @@ Disadvantages:
 | ssTem-VNC | 2 |512 × 512|30/30| Yes ||
 
 ## 3. Multiple Level Tracking (MLT-4) toolkit
+Bovelet et. al have published their tool <a href="https://wwwuser.gwdg.de/~astronom/" target="_blank">online</a>. This is the 2007 new version, written in IDL (Interactive Data Language) executable in PV-WAVE or IDL (not free).
+
+Alternative: <a href="https://github.com/gnudatalanguage/gdl" target="_blank">GDL (GNU Data Language)</a> which is open-source.
+
+There are lots of arguments, such as thresholds, etc. which need to be defined.
+
+## Other notes
+The DKIST data has $R$ domain, and cannot be visualized in raw format. Needs normalization to $[0, 1]$, and thus possible loss of information for the labeling stage (But not the segmentation task).
