@@ -100,7 +100,9 @@ Bovelet et. al have published their tool <a href="https://wwwuser.gwdg.de/~astro
 
 Alternative: <a href="https://github.com/gnudatalanguage/gdl" target="_blank">GDL (GNU Data Language)</a> which is open-source.
 
+![mlt4](resources/week_1/mlt4.png)
+
 There are lots of arguments, such as thresholds, etc. which need to be defined.
 
 ## Other notes
-The DKIST data has $R$ domain, and cannot be visualized in raw format. Needs normalization to $[0, 1]$, and thus possible loss of information for the labeling stage (But not the segmentation task).
+The DKIST data has $R$ domain, and cannot be visualized in raw format. Needs normalization to $[0, 1]$, and thus possible loss of information for the labeling stage (but not the segmentation task).
