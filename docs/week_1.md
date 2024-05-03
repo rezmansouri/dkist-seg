@@ -29,15 +29,32 @@ Advantages:
 - Good UI
 
 Disadvantages:
-- Exporting the annotations is challenging (scripting is needed)
+- Exporting the annotations is challenging (scripting is required)
 
 ### 1.4. LabelBox
+
+### 1.5. MIPAV
 
 ## 2. Datasets from other disciplines
 
 ### Medical
-1. Synapse multi-organ (CT) -> swin/trans-unet
-2. ACDC (MRI) -> swin/trans-unet
-3. unet: Web page of the em segmentation challenge, http://brainiac2.mit.edu/ isbi_challenge/
+1. **<a href="https://www.synapse.org/#!Synapse:syn3193805/wiki/217789" target="_blank">Synapse multi-organ</a>**
+
+    Benchmark dataset used in swin-unet & trans-unet
+
+
+2. **<a href="https://humanheart-project.creatis.insa-lyon.fr/database/#collection/637218c173e9f0047faa00fb/folder/637218e573e9f0047faa00fc" target="_blank">ACDC (MRI)</a>**
+
+    Benchmark dataset used in swin-unet & trans-unet
+    
+3. **<a href="https://downloads.imagej.net/ISBI-2012-challenge.zip" target="_blank">ssTEM-VNC</a>**
+
+    Benchmark dataset used in the original unet
+
+| Dataset | # Classes | Dimensions | # Samples | Labeled |
+|---------|:---------:|---------|---------|---------|
+| Synapse | 13 ||| Yes |
+| ACDC | ? ||| Yes |
+| ssTem-VNC | 2 ||| Yes |
 
 ## 3. Multiple Level Tracking (MLT-4) toolkit
