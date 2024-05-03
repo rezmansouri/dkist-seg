@@ -43,17 +43,19 @@ Disadvantages:
     Benchmark dataset used in swin-unet & trans-unet
     
     Abdomen set:
-    ![Abdomen](resources/week_1/synapse_abdomenn.png)    
+
+    ![Abdomen](resources/week_1/synapse_abdomen_1.png)    
 
     Cervix set:
-    ![Cervix](resources/week_1/synapse_cervixx.png)
+
+    ![Cervix](resources/week_1/synapse_cervix_1.png)
 
 
 2. **<a href="https://humanheart-project.creatis.insa-lyon.fr/database/#collection/637218c173e9f0047faa00fb/folder/637218e573e9f0047faa00fc" target="_blank">ACDC</a>**
 
     Benchmark dataset used in swin-unet & trans-unet
 
-    ![acdc](resources/week_1/acdcc.png)
+    ![acdc](resources/week_1/acdc_1.png)
     
 3. **<a href="https://downloads.imagej.net/ISBI-2012-challenge.zip" target="_blank">ssTEM-VNC</a>**
 
