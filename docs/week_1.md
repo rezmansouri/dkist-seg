@@ -59,7 +59,7 @@ Disadvantages:
 
     Benchmark dataset used in the original unet
 
-    ![em](resources/week_1/EMM.png)
+    ![em](resources/week_1/EM.png)
 
 | Dataset | # Classes | Dimensions | # Samples | Labeled | Remarks
 |---------|:---------:|---------|---------|---------|---------|
