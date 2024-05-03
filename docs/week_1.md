@@ -43,29 +43,29 @@ Disadvantages:
     Benchmark dataset used in swin-unet & trans-unet
     
     Abdomen set:
-    ![Abdomen](resources/week_1/synapse_abdomen.png)    
+    ![Abdomen](resources/week_1/synapse_abdomenn.png)    
 
     Cervix set:
-    ![Cervix](resources/week_1/synapse_cervix.png)
+    ![Cervix](resources/week_1/synapse_cervixx.png)
 
 
 2. **<a href="https://humanheart-project.creatis.insa-lyon.fr/database/#collection/637218c173e9f0047faa00fb/folder/637218e573e9f0047faa00fc" target="_blank">ACDC</a>**
 
     Benchmark dataset used in swin-unet & trans-unet
 
-    ![acdc](resources/week_1/acdc.png)
+    ![acdc](resources/week_1/acdcc.png)
     
 3. **<a href="https://downloads.imagej.net/ISBI-2012-challenge.zip" target="_blank">ssTEM-VNC</a>**
 
     Benchmark dataset used in the original unet
 
-    ![em](resources/week_1/em.png)
+    ![em](resources/week_1/EMM.png)
 
 | Dataset | # Classes | Dimensions | # Samples | Labeled | Remarks
 |---------|:---------:|---------|---------|---------|---------|
-| Synapse abdomen | 13 |512 $\times$ 512 $\times$ volume|30/20| Yes |No test label, volume $\approx$ 150|
-| Synapse cervix | 4 |512 $\times$ 512 $\times$ volume|30/20| Yes |No test label, volume $\approx$ 100|
-| ACDC |3|256 $\times$ 256 $\times$ volume|100/50| Yes ||
-| ssTem-VNC | 2 |512 $\times$ 512|30/30| Yes ||
+| Synapse abdomen | 13 |512 × 512 × volume|30/20| Yes |No test label, volume ≈ 150|
+| Synapse cervix | 4 |512 × 512 × volume|30/20| Yes |No test label, volume ≈ 100|
+| ACDC |3|256 × 256 × volume|100/50| Yes ||
+| ssTem-VNC | 2 |512 × 512|30/30| Yes ||
 
 ## 3. Multiple Level Tracking (MLT-4) toolkit
