@@ -105,4 +105,4 @@ Alternative: <a href="https://github.com/gnudatalanguage/gdl" target="_blank">GD
 There are lots of arguments, such as thresholds, etc. which need to be defined.
 
 ## Other notes
-The DKIST data has $R$ domain, and cannot be visualized in raw format. Needs normalization to $[0, 1]$, and thus possible loss of information for the labeling stage (but not the segmentation task).
+The DKIST data has R domain, and cannot be visualized in raw format. Needs normalization to [0, 1], and thus possible loss of information for the labeling stage (but not the segmentation task).
