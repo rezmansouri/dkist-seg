@@ -14,21 +14,7 @@ Disadvantages:
 
 ![label studio out](resources/week_1/label_studio_out.png)  
 
-### 1.2. LabKit (plugin from imageJ / Fiji)
-Advantages:
-- Free
-- Available for windows, macOS, linux
-- Very good UI for drawing
-- Has traditional ML for segmentation, as a starting point
-
-Disadvantages:
-- Need to work image by image and export annotations class by class
-
-![labkit](resources/week_1/labkit_ui.png)  
-
-![labkit out](resources/week_1/labkit_out.png)  
-
-### 1.3. QuPath
+### 1.2. QuPath
 *Software for Bioimage Analysis*
 
 Advantages:
@@ -41,9 +27,32 @@ Disadvantages:
 
 ![qupath](resources/week_1/qupath_ui.png)  
 
-![qupath out](resources/week_1/qupath_out.png)  
+![qupath out](resources/week_1/qupath_outt.png)  
 
-### 1.4. MIPAV
+### 1.3. MIPAV
+From NIH for medical image analysis
+
+Advantages:
+- widely used in research
+
+Disadvantages:
+- Not so user-friendly
+
+![mipav](resources/week_1/mipav.png)
+
+### 1.4. LabKit (plugin from imageJ / Fiji)
+Advantages:
+- Free
+- Available for windows, macOS, linux
+- Very good UI for drawing
+- Has traditional ML for segmentation, as a starting point
+
+Disadvantages:
+- Need to work image by image and export annotations class by class
+
+![labkit](resources/week_1/labkit_ui.png)  
+
+![labkit out](resources/week_1/labkit_outt.png)  
 
 ## 2. Datasets from other disciplines
 
