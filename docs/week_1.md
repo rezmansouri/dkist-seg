@@ -100,7 +100,7 @@ Bovelet et. al have published their tool <a href="https://wwwuser.gwdg.de/~astro
 
 Alternative: <a href="https://github.com/gnudatalanguage/gdl" target="_blank">GDL (GNU Data Language)</a> which is open-source.
 
-![mlt4](resources/week_1/mlt4.png)
+![mlt4](resources/week_1/mlt4_small.png)
 
 There are lots of arguments, such as thresholds, etc. which need to be defined.
 
