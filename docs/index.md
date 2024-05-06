@@ -4,3 +4,5 @@
 
 ### Weekly Reports
 [Week 1: 26 April - 3 May 2024](week_1.md)
+
+[Week 2: 3 May - 7 May 2024](week_2.md)
