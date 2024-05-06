@@ -53,6 +53,6 @@ plt.show()
 
 
     
-![png](../notebooks/week_2/week_2_files/week_2_3_0.png)
+![png](resources/week_2/1.png)
 
 ## 2. Toolkits for semantic segmentation
