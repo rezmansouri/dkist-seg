@@ -14,18 +14,25 @@ I could not find any more labeled data of the photosphere. Other unlabeled data 
 
 ### 1.2. CEM-MitoLab
 
-<a href="https://www.ebi.ac.uk/empiar/EMPIAR-11037/" target="_blank">Data</a>
+- 21, 860 frames (mostly 224 x 224)
+- Ground truth available
+- 2 classes, mitochondria and background
+- Data from <a href="https://www.sciencedirect.com/science/article/pii/S240547122200494X?ref=cra_js_challenge&fr=RR-1" target="_blank"> paper</a> available <a href="https://www.ebi.ac.uk/empiar/EMPIAR-11037/" target="_blank">here</a>
 
-<a href="https://www.sciencedirect.com/science/article/pii/S240547122200494X?ref=cra_js_challenge&fr=RR-1" target="_blank">Paper</a>
+![png](resources/week_2/2.png)
+
+![png](resources/week_2/3.png)
+
+![png](resources/week_2/4.png)
 
 ## 2. Toolkits for semantic segmentation
 ### 2.1. Models
 #### 2.1.1. State-of-the-art UNet in pytorch
 - Code from <a href="https://www.frontiersin.org/articles/10.3389/fspas.2022.896632/full" target="_blank">frontiers paper</a> available <a href="https://gitlab.leibniz-kis.de/smdiazcas/SegGranules_Unet_model" target="_blank">here</a>
-- Code from `segmentation-models-pytorch` <a href="https://github.com/qubvel/segmentation_models.pytorch">python package</a>
+- Code from `segmentation-models-pytorch` <a href="https://github.com/qubvel/segmentation_models.pytorch" target="_blank">python package</a>
 
 #### 2.1.2. UNet++ in pytorch
-- Code from `segmentation-models-pytorch` <a href="https://github.com/qubvel/segmentation_models.pytorch">python package</a>
+- Code from `segmentation-models-pytorch` <a href="https://github.com/qubvel/segmentation_models.pytorch" target="_blank">python package</a>
 
 #### 2.1.3. TransUnet in pytorch
 - Code from the <a href="https://arxiv.org/pdf/2102.04306.pdf" target="_blank">original paper</a> available  <a href="https://github.com/Beckschen/TransUNet?tab=readme-ov-file" target="_blank">here</a>
