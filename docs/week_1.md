@@ -54,7 +54,15 @@ Disadvantages:
 
 ![labkit](resources/week_1/labkit_ui.png)  
 
-![labkit out](resources/week_1/labkit_outt.png)  
+![labkit out](resources/week_1/labkit_outt.png)
+
+### <span style="color: red;">1.5. Kaibu</span>
+*Found later*, web-based, easy to use.
+https://kaibu.org/
+
+
+### <span style="color: red;">1.6. MATLAB</span>
+*Found later*.
 
 ## 2. Datasets from other disciplines
 
