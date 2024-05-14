@@ -11,7 +11,7 @@ class MetalDataset(Dataset):
         super(MetalDataset, self).__init__()
         images = []
         masks = []
-        for image_name in sorted(os.listdir(image_root)[start:end]):
+        for image_name in sorted(os.listdir(image_root))[start:end]:
             image = cv2.imread(os.path.join(
                 image_root, image_name), cv2.IMREAD_GRAYSCALE)
             signature = image_name[2:]
