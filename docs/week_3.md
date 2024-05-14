@@ -2,6 +2,7 @@
 
 # 1. New data
 ## 1.1. <a href="https://www.kaggle.com/datasets/peterwarren/voronoi-artificial-grains-gen/data" target="_blank">ExON Steel Grains</a>
+- A Kaggle dataset (not benchmarked)
 - 480 Images
 - 400 x 400
 - 2 classes: Foreground and background
