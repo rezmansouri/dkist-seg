@@ -15,7 +15,7 @@
 - 9 classes
 - Ground truth available
 
-<img src="resources/week_3/malaria.png", width="70%">
+<img src="resources/week_3/malaria Medium.jpeg">
 
 # 2. Experiments
 ## 2.1. ImaX/Sunrise
