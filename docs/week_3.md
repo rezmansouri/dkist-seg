@@ -1,15 +1,21 @@
 <h1>Week Three: 7 May - 14 May</h1>
 
 # 1. New data
-- https://www.kaggle.com/datasets/peterwarren/voronoi-artificial-grains-gen/data
+## 1.1. <a href="https://www.kaggle.com/datasets/peterwarren/voronoi-artificial-grains-gen/data" target="_blank">ExON Steel Grains</a>
+- 480 Images
+- 400 x 400
+- 2 classes: Foreground and background
+- Ground truth available
 
-- https://datasetninja.com/annotated-quantitative-phase-microscopy-cell-dataset
+<img src="resources/week_3/steel.svg">
 
-- https://datasetninja.com/malaria-segmentation
+## 1.2. <a href="https://datasetninja.com/malaria-segmentation" target="_blank">Malaria</a>
+- 3572 Images
+- 1382 x 1030
+- 9 classes
+- Ground truth available
 
-- https://datasetninja.com/ccagt
-
-- paper: https://www.sciencedirect.com/science/article/pii/S104458032100108X data: https://data.mendeley.com/datasets/t4wvpy29fz/2
+<img src="resources/week_3/malaria.png">
 
 # 2. Experiments
 ## 2.1. ImaX/Sunrise
@@ -39,3 +45,4 @@
 ## 2.3. MitoLab
 ### SegNet - Cross entropy loss
 <img src="resources/week_3/plots/segnet_mito.svg">
+<img src="resources/week_3/maps/segnet_mito.svg">
