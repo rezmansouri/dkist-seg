@@ -7,4 +7,4 @@
 
 [Week 2: 3 May - 7 May 2024](week_2.md)
 
-[Week 3: 7 May - 13 May 2024](week_3.md)
+[Week 3: 7 May - 14 May 2024](week_3.md)
