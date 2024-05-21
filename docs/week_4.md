@@ -11,7 +11,7 @@
 -   Cost-sensetive learning
     -   A cost matrix is introduced (static/dynamic)
 
-    <img src="resources/week_4/cost_matrix.gif">
+    <img src="resources/week_4/cost_matrix.gif" width="60%>
     
     -   Loss function is adjusted/weighted
 
