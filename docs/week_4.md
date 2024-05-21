@@ -14,6 +14,7 @@
     <img src="resources/week_4/cost_matrix.gif">
     
     -   Loss function is adjusted/weighted
+    
     <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0303243422000162-gr1.jpg">
     -   Can be utilized in 4 ways:
         - Applied to the probabilistic estimate
