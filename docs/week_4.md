@@ -26,7 +26,7 @@
 
 ### Two-phase training:
 1. Train on equiprobable classes
-2. Fine-tune (i.e., high-level feature layers) on hard classes
+2. Fine-tune (i.e., low-level feature layers at the top) on hard classes
 
 <a href="https://doi.org/10.1016/j.media.2016.05.004" target="_blank">Reference</a>
 
