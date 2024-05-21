@@ -14,7 +14,7 @@
     <img src="resources/week_4/cost_matrix.gif">
     
     -   Loss function is adjusted/weighted
-    
+
     <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0303243422000162-gr1.jpg">
     -   Can be utilized in 4 ways:
         - Applied to the probabilistic estimate
@@ -45,20 +45,20 @@
 ### UNet
 #### Focal loss
 <img src="resources/week_4/unet_fl_best_val_1.svg">
-<img src="resources/week_4/unet_focal.svg">
+<img src="resources/week_4/unet_focal1.svg">
 
 #### mIoU
 <img src="resources/week_4/unet_iou_best_val_1.svg">
-<img src="resources/week_4/unet_iou.svg">
+<img src="resources/week_4/unet_iou1.svg">
 
 ### SegNet
 #### Focal loss
 <img src="resources/week_4/seg_fl_best_val_1.svg">
-<img src="resources/week_4/seg_focal.svg">
+<img src="resources/week_4/seg_focal1.svg">
 
 #### mIoU
 <img src="resources/week_4/seg_iou_best_val_1.svg">
-<img src="resources/week_4/seg_iou.svg">
+<img src="resources/week_4/seg_iou1.svg">
 
 ## All references
 
