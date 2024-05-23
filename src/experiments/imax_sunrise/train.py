@@ -98,7 +98,7 @@ def run(model, train_loader, val_loader, n_epochs, criterion, optimizer, device,
         compare_loss = np.mean(val_loss_list)
         is_best = compare_loss < min_loss
         print('\n', min_loss, compare_loss)
-        if is_best and True:
+        if is_best and save_model:
             print("Best_model")
             scheduler_counter = 0
             min_loss = min(compare_loss, min_loss)
@@ -117,7 +117,7 @@ def run(model, train_loader, val_loader, n_epochs, criterion, optimizer, device,
             ), os.path.join(output_path, 'epoch_{}_{:.5f}.pt'.format(epoch, np.mean(val_loss_list))))
 
     if save_model:
-        with open(os.path.join(output_path, 'stats.npy', 'wb')) as f:
+        with open(os.path.join(output_path, 'stats.npy'), 'wb') as f:
             np.save(f, save_losses)
             np.save(f, save_h_train_losses)
             np.save(f, save_h_val_losses)

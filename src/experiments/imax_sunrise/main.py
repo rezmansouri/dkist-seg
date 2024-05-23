@@ -78,7 +78,7 @@ def main():
     shutil.copy2(cfg_path, OUTPUT_PATH)
 
     train.run(model=model, train_loader=train_loader, val_loader=val_loader, n_epochs=N_EPOCHS, criterion=criterion,
-              optimizer=optimizer, device=device, output_path=OUTPUT_PATH, save_model=False, model_summary=True)
+              optimizer=optimizer, device=device, output_path=OUTPUT_PATH, save_model=True, model_summary=True)
 
 
 if __name__ == '__main__':
