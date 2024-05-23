@@ -1,0 +1,11 @@
+{
+    "train_dir": "data/train",
+    "val_dir": "data/val",
+    "train_size": 10,
+    "val_size": 1,
+    "loss": "focal",
+    "batch_size": 32,
+    "n_epochs": 50,
+    "model": "unet",
+    "output_path": "results"
+}
