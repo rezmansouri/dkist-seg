@@ -54,9 +54,9 @@ def main():
         val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=num_workers)
 
     if MODEL_STR == 'unet':
-        model = models.UNet()
+        model = models.UNet().to(device)
     elif MODEL_STR == 'swinunet':
-        model = models.SwinUNet()
+        model = models.SwinUNet().to(device)
     else:
         raise ValueError('wrong model in config')
 
