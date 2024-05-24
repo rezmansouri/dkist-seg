@@ -55,7 +55,7 @@ def main():
 
     if MODEL_STR == 'unet':
         model = models.UNet()
-    if MODEL_STR == 'swinunet':
+    elif MODEL_STR == 'swinunet':
         model = models.SwinUNet()
     else:
         raise ValueError('wrong model in config')
