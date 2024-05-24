@@ -6,6 +6,6 @@
     "loss": "focal",
     "batch_size": 32,
     "n_epochs": 5,
-    "model": "unet",
+    "model": "swinunet",
     "output_path": "results"
 }

@@ -55,6 +55,8 @@ def main():
 
     if MODEL_STR == 'unet':
         model = models.UNet()
+    if MODEL_STR == 'swinunet':
+        model = models.SwinUNet()
     else:
         raise ValueError('wrong model in config')
 
@@ -62,8 +64,8 @@ def main():
 
     if LOSS_STR == 'focal':
         criterion = losses.FocalLoss(alpha=loss_weights).to(device)
-    elif LOSS_STR == 'lovazs':
-        criterion = losses.Lovazs()
+    elif LOSS_STR == 'lovasz':
+        criterion = losses.Lovasz
     else:
         raise ValueError('wrong loss in config')
 

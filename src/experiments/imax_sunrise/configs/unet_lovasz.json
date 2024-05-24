@@ -3,7 +3,7 @@
     "val_dir": "data/val",
     "train_size": 10,
     "val_size": 1,
-    "loss": "focal",
+    "loss": "lovasz",
     "batch_size": 32,
     "n_epochs": 5,
     "model": "unet",
