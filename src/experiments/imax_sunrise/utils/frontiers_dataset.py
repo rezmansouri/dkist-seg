@@ -277,7 +277,7 @@ class segDataset(torch.utils.data.Dataset):
                     tmp3.append(torch.round(t_res))
 
                 p_map_mask_res = np.array(
-                    [tmp3[i]*u_lables[i] for i in range(5)]).sum(axis=0)
+                    [(tmp3[i]*u_lables[i]).cpu().detach().numpy() for i in range(5)]).sum(axis=0)
 
                 p_map_res = p_map_res.cpu().detach().numpy()
                 # p_map_mask_res = p_map_mask_res.cpu().detach().numpy()
@@ -349,7 +349,6 @@ class segDataset_val(torch.utils.data.Dataset):
                                                 Ttorch.RandomVerticalFlip(
                                                     p=0.5)
                                                  ])
-
 
         print("Reading images...")
         self.smap = []
