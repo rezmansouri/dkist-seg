@@ -16,7 +16,7 @@ import numpy as np
 from torch.nn import Dropout, Softmax, Linear, Conv2d, LayerNorm
 from torch.nn.modules.utils import _pair
 from scipy import ndimage
-from vit_seg_modeling_resnet_skip import ResNetV2
+from .vit_seg_modeling_resnet_skip import ResNetV2
 
 
 logger = logging.getLogger(__name__)
