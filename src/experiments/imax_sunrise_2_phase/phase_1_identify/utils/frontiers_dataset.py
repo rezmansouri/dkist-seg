@@ -315,7 +315,7 @@ class segDataset(torch.utils.data.Dataset):
             np.array([smap, mask_smap]).transpose(), weight_map, index_l)
 
         self.image = img_t[0].unsqueeze(0)
-        self.mask = img_t[1].unsqueeze(0).type(torch.int64)
+        self.mask = img_t[1].unsqueeze(0)
         # return self.image, self.mask, ind, c  #for test central points
         return self.image, self.mask
 
@@ -329,14 +329,10 @@ class segDataset_val(torch.utils.data.Dataset):
         self.files = files
         self.size = s
         self.l = l
-        self.classes = {'Intergranular lane': 0,
-                        'Normal-shape granules': 1,
-                        'Granules with dots': 2,
-                        'Granules with lanes': 3,
-                        'Complex-shape granules': 4}
+        self.classes = {'lane': 0,
+                        'granule': 1}
 
-        self.bin_classes = ['Intergranular lane', 'Normal-shape granules', 'Granules with dots', 'Granules with lanes',
-                            'Complex-shape granules']
+        self.bin_classes = ['lane', 'granule']
 
         self.transform_serie = Secuential_trasn([Ttorch.ToTensor(),
                                                 SRS_crop(self.size),
@@ -393,7 +389,7 @@ class segDataset_val(torch.utils.data.Dataset):
             np.array([smap, mask_smap]).transpose(), weight_map, index_l)
 
         self.image = img_t[0].unsqueeze(0)
-        self.mask = img_t[1].unsqueeze(0).type(torch.int64)
+        self.mask = img_t[1].unsqueeze(0)
         # return self.image, self.mask, ind, c  #for test central points
         return self.image, self.mask
 
