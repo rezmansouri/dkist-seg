@@ -1,0 +1,11 @@
+{
+    "train_dir": "data/train",
+    "val_dir": "data/val",
+    "train_size": 10000,
+    "val_size": 1000,
+    "loss": "bce",
+    "batch_size": 64,
+    "n_epochs": 50,
+    "model": "unet",
+    "output_path": "results"
+}
