@@ -38,7 +38,7 @@ def main():
     train_files = []
     train_masks = []
     for f in os.listdir(TRAIN_DIR):
-        file = np.load(os.path.join(TRAIN_DIR, f))
+        file = dict(np.load(os.path.join(TRAIN_DIR, f)))
         mask = file['cmask_map']
         mask[mask!=0] = 1
         file['cmask_map'] = mask
@@ -50,7 +50,7 @@ def main():
 
     val_files = []
     for f in os.listdir(VAL_DIR):
-        file = np.load(os.path.join(VAL_DIR, f))
+        file = dict(np.load(os.path.join(VAL_DIR, f)))
         mask = file['cmask_map']
         mask[mask!=0] = 1
         file['cmask_map'] = mask
