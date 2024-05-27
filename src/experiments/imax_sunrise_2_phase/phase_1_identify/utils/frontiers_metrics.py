@@ -16,6 +16,7 @@ def nanmean(x):
 
 def _fast_hist(true, pred, num_classes):
     mask = (true >= 0) & (true < num_classes)
+    true = true.type(torch.int64)
     hist = torch.bincount(
         num_classes * true[mask] + pred[mask],
         minlength=num_classes ** 2,
