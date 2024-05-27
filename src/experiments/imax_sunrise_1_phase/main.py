@@ -61,6 +61,7 @@ def main():
         raise ValueError('wrong model in config')
 
     loss_weights = utils.get_weights(train_masks).to(device)
+    print(loss_weights)
 
     if LOSS_STR == 'focal':
         criterion = losses.FocalLoss(alpha=loss_weights).to(device)
