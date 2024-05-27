@@ -315,7 +315,7 @@ class segDataset(torch.utils.data.Dataset):
             np.array([smap, mask_smap]).transpose(), weight_map, index_l)
 
         self.image = img_t[0].unsqueeze(0)
-        self.mask = img_t[1].type(torch.int64)
+        self.mask = img_t[1].unsqueeze(0).type(torch.int64)
         # return self.image, self.mask, ind, c  #for test central points
         return self.image, self.mask
 
@@ -393,7 +393,7 @@ class segDataset_val(torch.utils.data.Dataset):
             np.array([smap, mask_smap]).transpose(), weight_map, index_l)
 
         self.image = img_t[0].unsqueeze(0)
-        self.mask = img_t[1].type(torch.int64)
+        self.mask = img_t[1].unsqueeze(0).type(torch.int64)
         # return self.image, self.mask, ind, c  #for test central points
         return self.image, self.mask
 
