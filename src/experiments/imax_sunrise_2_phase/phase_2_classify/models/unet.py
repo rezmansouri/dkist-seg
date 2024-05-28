@@ -116,5 +116,5 @@ class UNet(nn.Module):
     
     def freeze_lower(self):
         for layer in [self.down2, self.down3, self.down4, self.up1, self.up2, self.up3]:
-            for param in layer:
+            for param in layer.parameters():
                 param.requires_grad = False
