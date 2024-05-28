@@ -65,7 +65,7 @@ def main():
     if LOSS_STR == 'focal':
         criterion = losses.FocalLoss(alpha=loss_weights).to(device)
     elif LOSS_STR == 'mIoU':
-        criterion = losses.MIoU(weight=loss_weights).to(device)
+        criterion = losses.MIoU(weight=loss_weights, n_classes=5).to(device)
 
     optimizer = torch.optim.Adam(params=model.parameters(), lr=1e-3)
 
