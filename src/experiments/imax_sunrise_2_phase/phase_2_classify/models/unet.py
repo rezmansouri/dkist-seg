@@ -115,9 +115,6 @@ class UNet(nn.Module):
         return logits
     
     def freeze_lower(self):
-        self.down2.requires_grad_ = False
-        self.down3.requires_grad_ = False
-        self.down4.requires_grad_ = False
-        self.up1.requires_grad_ = False
-        self.up2.requires_grad_ = False
-        self.up3.requires_grad_ = False
+        for layer in [self.down2, self.down3, self.down4, self.up1, self.up2, self.up3]:
+            for param in layer:
+                param.requires_grad = False
