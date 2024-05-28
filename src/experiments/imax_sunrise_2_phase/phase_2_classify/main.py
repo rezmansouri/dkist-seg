@@ -54,11 +54,12 @@ def main():
     val_loader = torch.utils.data.DataLoader(
         val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=num_workers)
 
-    model = models.UNet(n_classes=1).to(device)
+    model = models.UNet(n_classes=1)
     state = torch.load(MODEL_STATE_PATH)
     model.load_state_dict(state)
     model.change_last(n_classes=5)
     model.freeze_lower()
+    model = model.to(device)
 
     loss_weights = utils.get_weights(train_masks).to(device)
     criterion = losses.FocalLoss(alpha=loss_weights).to(device)
