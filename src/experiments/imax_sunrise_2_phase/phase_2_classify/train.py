@@ -9,7 +9,7 @@ from torchsummary import summary
 def run(model, train_loader, val_loader, n_epochs, criterion, optimizer, device, output_path, save_model=False, model_summary=False):
 
     if model_summary:
-        summary(model, (1, 1, 128, 128))
+        summary(model, (1, 128, 128))
 
     # Ajust learing rate
     # Decays the learning rate of each parameter group by gamma every step_size epochs.
