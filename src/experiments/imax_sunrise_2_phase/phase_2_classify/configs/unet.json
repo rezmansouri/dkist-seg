@@ -8,5 +8,5 @@
     "n_epochs": 50,
     "model": "unet",
     "output_path": "results",
-    "model_state_path": "results/unet_bce_2024-05-27 22:26:29/epoch_23_0.10525.pt"
+    "model_state_path": "/home/dkist/github/dkist-seg/src/experiments/imax_sunrise_2_phase/phase_1_identify/results/unet_bce_2024-05-27 22:26:29/epoch_23_0.10525.pt"
 }
