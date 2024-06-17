@@ -59,17 +59,18 @@ def main():
     val_loader = torch.utils.data.DataLoader(
         val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=num_workers)
 
-    # if MODEL_STR == 'unet':
-    #     model = models.UNet().to(device)
+    if MODEL_STR == 'unet':
+        model = models.U_Net(img_ch=1, output_ch=1).to(device)
+    elif MODEL_STR == 'r2unet':
+        model = models.R2U_Net(img_ch=1, output_ch=1).to(device)
+    elif MODEL_STR == 'attunet':
+        model = models.AttU_Net(img_ch=1, output_ch=1).to(device)
+    elif MODEL_STR == 'r2attunet':
+        model = models.R2AttU_Net(img_ch=1, output_ch=1).to(device)
     # elif MODEL_STR == 'swinunet':
     #     model = models.SwinUNet().to(device)
-    # else:
-    #     raise ValueError('wrong model in config')
-
-    # loss_weights = utils.get_weights(train_masks).to(device)
-    # print(loss_weights)
-    
-    model = models.UNet(n_classes=1).to(device)
+    else:
+        raise ValueError('wrong model in config')
 
     # if LOSS_STR == 'bce':
     #     criterion = torch.nn.BCELoss
