@@ -202,7 +202,7 @@ class U_Net(nn.Module):
 
 
 class R2U_Net(nn.Module):
-    def __init__(self,output_ch=5,t=2):
+    def __init__(self,img_ch=1, output_ch=5,t=2):
         super(R2U_Net,self).__init__()
         
         self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)
@@ -347,7 +347,7 @@ class AttU_Net(nn.Module):
 
 
 class R2AttU_Net(nn.Module):
-    def __init__(self,output_ch=5,t=2):
+    def __init__(self,img_ch=1, output_ch=5,t=2):
         super(R2AttU_Net,self).__init__()
         
         self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)
