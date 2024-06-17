@@ -54,7 +54,13 @@ def main():
         val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=num_workers)
 
     if MODEL_STR == 'unet':
-        model = models.UNet().to(device)
+        model = models.U_Net().to(device)
+    elif MODEL_STR == 'r2unet':
+        model = models.R2U_Net().to(device)
+    elif MODEL_STR == 'attunet':
+        model = models.AttU_Net().to(device)
+    elif MODEL_STR == 'r2attunet':
+        model = models.R2AttU_Net().to(device)
     elif MODEL_STR == 'swinunet':
         model = models.SwinUNet().to(device)
     else:
