@@ -347,6 +347,11 @@ class AttU_Net(nn.Module):
     
     def change_last(self, n_classes=5):
         self.Conv_1x1 = nn.Conv2d(64,n_classes,kernel_size=1,stride=1,padding=0)
+        
+    def freeze_lower(self):
+        for layer in [self.Conv3, self.Conv4, self.Conv5, self.Up5, self.Up4, self.Up3, self.Up_conv5, self.Up_conv4, self.Up_conv3]:
+            for param in layer.parameters():
+                param.requires_grad = False
 
 
 class R2AttU_Net(nn.Module):

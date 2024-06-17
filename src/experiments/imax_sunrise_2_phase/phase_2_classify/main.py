@@ -71,6 +71,7 @@ def main():
         state = torch.load(MODEL_STATE_PATH)
         model.load_state_dict(state)
         model.change_last(n_classes=5)
+        model.freeze_lower()
         model = model.to(device)
     elif MODEL_STR == 'r2attunet':
         model = models.R2AttU_Net(img_ch=1, output_ch=1).to(device)
