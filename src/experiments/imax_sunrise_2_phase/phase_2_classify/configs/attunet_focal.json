@@ -1,0 +1,12 @@
+{
+    "train_dir": "data/train",
+    "val_dir": "data/val",
+    "train_size": 10,
+    "val_size": 1,
+    "loss": "focal",
+    "batch_size": 32,
+    "n_epochs": 5,
+    "model": "attunet",
+    "output_path": "results",
+    "model_state_path": "/Users/reza/Career/DMLab/DKIST/dkist-seg/src/experiments/imax_sunrise_2_phase/phase_1_identify/results/attunet_focal_2024-06-17 13:31:54/epoch_3_0.68609.pt"
+}

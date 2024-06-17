@@ -53,13 +53,31 @@ def main():
     val_dataset = utils.segDataset_val(val_files, VAL_SIZE)
     val_loader = torch.utils.data.DataLoader(
         val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=num_workers)
-
-    model = models.UNet(n_classes=1)
-    state = torch.load(MODEL_STATE_PATH)
-    model.load_state_dict(state)
-    model.change_last(n_classes=5)
-    model.freeze_lower()
-    model = model.to(device)
+    
+    if MODEL_STR == 'unet':
+        model = models.U_Net(img_ch=1, output_ch=1).to(device)
+        state = torch.load(MODEL_STATE_PATH)
+        model.load_state_dict(state)
+        model.change_last(n_classes=5)
+        model = model.to(device)
+    elif MODEL_STR == 'r2unet':
+        model = models.R2U_Net(img_ch=1, output_ch=1).to(device)
+        state = torch.load(MODEL_STATE_PATH)
+        model.load_state_dict(state)
+        model.change_last(n_classes=5)
+        model = model.to(device)
+    elif MODEL_STR == 'attunet':
+        model = models.AttU_Net(img_ch=1, output_ch=1).to(device)
+        state = torch.load(MODEL_STATE_PATH)
+        model.load_state_dict(state)
+        model.change_last(n_classes=5)
+        model = model.to(device)
+    elif MODEL_STR == 'r2attunet':
+        model = models.R2AttU_Net(img_ch=1, output_ch=1).to(device)
+        state = torch.load(MODEL_STATE_PATH)
+        model.load_state_dict(state)
+        model.change_last(n_classes=5)
+        model = model.to(device)
 
     loss_weights = utils.get_weights(train_masks).to(device)
     if LOSS_STR == 'focal':
@@ -78,7 +96,7 @@ def main():
     shutil.copy2(cfg_path, OUTPUT_PATH)
 
     train.run(model=model, train_loader=train_loader, val_loader=val_loader, n_epochs=N_EPOCHS, criterion=criterion,
-              optimizer=optimizer, device=device, output_path=OUTPUT_PATH, save_model=True, model_summary=True)
+              optimizer=optimizer, device=device, output_path=OUTPUT_PATH, save_model=True, model_summary=False)
 
 
 if __name__ == '__main__':
