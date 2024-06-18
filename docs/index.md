@@ -10,3 +10,11 @@
 [Week 3: 7 May - 14 May 2024](week_3.md)
 
 [Week 4: 14 May - 21 May 2024](week_4.md)
+
+Week 5: 21 May - 28 May 2024: Slides for meeting with Kevin & Leah
+
+Week 6: 28 May - 4 June 2024: Labeling software investigation
+
+Week 7: 4 June - 11 June 2024: Labeling software tutorial
+
+[Week 8: 11 June 2024 - 18 June 2024](week_8.md)
