@@ -4,14 +4,14 @@
 <img src="resources/week_8/AttU-Net.png">
 <img src="resources/week_8/att_raster.svg">
 <img src="resources/week_8/att_acc.svg">
-<img src="resources/week_8/att_loss.svg">
+<!-- <img src="resources/week_8/att_loss.svg"> -->
 
 
 ## R2 UNet
 <img src="resources/week_8/R2U-Net.png">
 <img src="resources/week_8/att_raster.svg">
 <img src="resources/week_8/att_acc.svg">
-<img src="resources/week_8/att_loss.svg">
+<!-- <img src="resources/week_8/att_loss.svg"> -->
 
 
 ### UNet (Frontiers)
