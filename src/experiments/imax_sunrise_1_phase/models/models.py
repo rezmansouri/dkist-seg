@@ -323,12 +323,12 @@ class AttU_Net(nn.Module):
         x4 = self.Conv4(x4)
 
         x5 = self.Maxpool(x4)
-        x5 = self.drop_out(x5)
+        # x5 = self.drop_out(x5)
         x5 = self.Conv5(x5)
 
         # decoding + concat path
         d5 = self.Up5(x5)
-        d5 = self.drop_out(d5)
+        # d5 = self.drop_out(d5)
         x4 = self.Att5(g=d5,x=x4)
         d5 = torch.cat((x4,d5),dim=1)        
         d5 = self.Up_conv5(d5)

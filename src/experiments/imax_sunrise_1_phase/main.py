@@ -76,7 +76,7 @@ def main():
     else:
         raise ValueError('wrong loss in config')
 
-    optimizer = torch.optim.Adam(params=model.parameters(), lr=1e-7)
+    optimizer = torch.optim.Adam(params=model.parameters(), lr=1e-3)
 
     experiment_dir_name = MODEL_STR + '_' + LOSS_STR + \
         '_' + datetime.now().strftime('%Y-%m-%d %H:%M:%S')
