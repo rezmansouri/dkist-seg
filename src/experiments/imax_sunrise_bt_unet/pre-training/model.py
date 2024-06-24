@@ -27,17 +27,15 @@ class Projector(nn.Module):
             ch_in=bottleneck_ch_in, ch_out=bottleneck_ch_out)
         self.GlobalAvgPool = nn.AdaptiveAvgPool2d(1)
         self.Head = nn.Sequential(
-            [
-                nn.Linear(bottleneck_ch_out, projection_dim),
-                nn.BatchNorm1d(projection_dim),
-                nn.ReLU(),
-                nn.Linear(projection_dim, projection_dim),
-                nn.BatchNorm1d(projection_dim),
-                nn.ReLU(),
-                nn.Linear(projection_dim, projection_dim)
-            ]
+            nn.Linear(bottleneck_ch_out, projection_dim),
+            nn.BatchNorm1d(projection_dim),
+            nn.ReLU(),
+            nn.Linear(projection_dim, projection_dim),
+            nn.BatchNorm1d(projection_dim),
+            nn.ReLU(),
+            nn.Linear(projection_dim, projection_dim)
         )
-    
+
     def forward(self, x):
         x = self.Bottleneck(x)
         x = self.GlobalAvgPool(x)
