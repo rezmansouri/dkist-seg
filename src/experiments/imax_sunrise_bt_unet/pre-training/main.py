@@ -15,9 +15,9 @@ def main():
 
     TRAIN_DIR = './data/train'
     VAL_DIR = './data/val'
-    TRAIN_SIZE = 10_000
-    BATCH_SIZE = 256
-    VAL_SIZE = 1_000
+    TRAIN_SIZE = 27_000
+    BATCH_SIZE = 512
+    VAL_SIZE = 3_000
     N_EPOCHS = 100
     OUTPUT_PATH = './results'
 
@@ -32,7 +32,7 @@ def main():
         train_files.append(file)
     train_dataset = utils.segDataset(train_files, TRAIN_SIZE)
     train_loader = torch.utils.data.DataLoader(
-        train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=num_workers, collate_fn=barlow_twins.collate)
+        train_dataset, batch_size=BATCH_SIZE, shuffle=True, collate_fn=barlow_twins.collate)
 
     val_files = []
     for f in os.listdir(VAL_DIR):
@@ -40,7 +40,7 @@ def main():
         val_files.append(file)
     val_dataset = utils.segDataset_val(val_files, VAL_SIZE)
     val_loader = torch.utils.data.DataLoader(
-        val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=num_workers, collate_fn=barlow_twins.collate)
+        val_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=barlow_twins.collate)
 
     encoder = model.UNetEncoder(img_ch=1).to(device)
 
@@ -50,7 +50,7 @@ def main():
 
     params = list(encoder.parameters()) + list(projector.parameters())
 
-    optimizer = torch.optim.Adam(params=params, lr=1e-3)
+    optimizer = barlow_twins.LARS(params, lr=1e-3)
 
     experiment_dir_name = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     OUTPUT_PATH = os.path.join(
