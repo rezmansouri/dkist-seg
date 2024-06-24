@@ -317,7 +317,7 @@ class segDataset(torch.utils.data.Dataset):
         self.image = img_t[0].unsqueeze(0)
         self.mask = img_t[1].unsqueeze(0)
         # return self.image, self.mask, ind, c  #for test central points
-        return self.image, self.mask
+        return self.image#, self.mask
 
     def __len__(self):
         return self.l
@@ -391,7 +391,7 @@ class segDataset_val(torch.utils.data.Dataset):
         self.image = img_t[0].unsqueeze(0)
         self.mask = img_t[1].unsqueeze(0)
         # return self.image, self.mask, ind, c  #for test central points
-        return self.image, self.mask
+        return self.image#, self.mask
 
     def __len__(self):
         return self.l

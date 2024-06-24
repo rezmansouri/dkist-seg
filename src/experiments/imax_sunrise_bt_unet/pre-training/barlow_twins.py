@@ -1,5 +1,6 @@
 import torch
 import random
+import numpy as np
 import torch.nn as nn
 import torchvision.transforms as transforms
 from PIL import Image, ImageOps, ImageFilter
@@ -32,11 +33,11 @@ def off_diagonal(x):
     return x.flatten()[:-1].view(n - 1, n + 1)[:, 1:].flatten()
 
 
-def bt_loss(z_a, z_b, lambd):
+def bt_loss(z_a, z_b, lambd=5e-3):
     batch_size, n_features = z_a.shape
 
-    z_a_norm = nn.BatchNorm1d(n_features)(z_a)
-    z_b_norm = nn.BatchNorm1d(n_features)(z_b)
+    z_a_norm = (z_a - z_a.mean()) / z_a.std()
+    z_b_norm = (z_b - z_b.mean()) / z_b.std()
 
     c = z_a_norm.T @ z_b_norm / batch_size
 
@@ -77,4 +78,10 @@ transform = Transform()
 
 
 def collate(batch):
-    return transform(batch)
+    y1s, y2s = [], []
+    for img_tensor in batch:
+        img_np = np.array(img_tensor.numpy()[0] * 255, dtype=np.uint8)
+        y1, y2 = transform(Image.fromarray(img_np))
+        y1s.append(y1)
+        y2s.append(y2)
+    return torch.stack(y1s), torch.stack(y2s)

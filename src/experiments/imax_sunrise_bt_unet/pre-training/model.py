@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 
 
@@ -39,6 +40,7 @@ class Projector(nn.Module):
     def forward(self, x):
         x = self.Bottleneck(x)
         x = self.GlobalAvgPool(x)
+        x = torch.squeeze(x, dim=(-1, -2))
         x = self.Head(x)
         return x
 
@@ -69,3 +71,5 @@ class UNetEncoder(nn.Module):
 
         x5 = self.Maxpool(x4)
         x5 = self.Conv5(x5)
+        
+        return x5

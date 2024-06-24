@@ -63,7 +63,7 @@ def run(net, projector, train_loader, val_loader, n_epochs, criterion, optimizer
             val_loss = criterion(z1, z2)
             val_loss_list.append(val_loss.cpu().detach().numpy())
 
-        print('\n epoch {} - loss : {:.5f} - val loss : {:.5f}'.format(epoch,np.mean(loss_list)))
+        print('\n epoch {} - loss : {:.5f} - val loss : {:.5f}'.format(epoch, np.mean(loss_list), np.mean(val_loss_list)))
 
         save_losses.append([epoch, np.mean(loss_list), np.mean(val_loss_list)])
 
