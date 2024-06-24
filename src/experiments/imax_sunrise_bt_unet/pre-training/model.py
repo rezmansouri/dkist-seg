@@ -22,6 +22,7 @@ class conv_block(nn.Module):
 
 class Projector(nn.Module):
     def __init__(self, bottleneck_ch_in, bottleneck_ch_out, projection_dim):
+        super(Projector, self).__init__()
         self.Bottleneck = conv_block(
             ch_in=bottleneck_ch_in, ch_out=bottleneck_ch_out)
         self.GlobalAvgPool = nn.AdaptiveAvgPool2d(1)
