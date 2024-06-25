@@ -5,7 +5,7 @@ import utils
 import torch
 import train
 import shutil
-import experiments.imax_sunrise_bt_unet.training.models as models
+import models
 import losses
 import numpy as np
 from datetime import datetime
@@ -57,7 +57,7 @@ def main():
     state = torch.load(MODEL_STATE_PATH, map_location=device)
     encoder.load_state_dict(state)
     
-    unet = models.PreTrainedUNet(encoder, scale=4, dropout=True)
+    unet = models.PreTrainedUNet(encoder, scale=4, dropout=True).to(device)
 
     loss_weights = utils.get_weights(train_masks).to(device)
     if LOSS_STR == 'focal':

@@ -18,3 +18,5 @@ Week 6: 28 May - 4 June 2024: Labeling software investigation
 Week 7: 4 June - 11 June 2024: Labeling software tutorial
 
 [Week 8: 11 June 2024 - 18 June 2024](week_8.md)
+
+[Week 9: 18 June 2024 - 25 June 2024](week_9.md)
