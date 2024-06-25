@@ -46,10 +46,13 @@ class Projector(nn.Module):
 
 
 class UNetEncoder(nn.Module):
-    def __init__(self, img_ch, scale):
+    def __init__(self, img_ch, scale, dropout):
         super(UNetEncoder, self).__init__()
+        
+        self.dropout = dropout
 
         self.Maxpool = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.Drop = nn.Dropout2d()
 
         self.Conv1 = conv_block(ch_in=img_ch, ch_out=64//scale)
         self.Conv2 = conv_block(ch_in=64//scale, ch_out=128//scale)
@@ -62,12 +65,21 @@ class UNetEncoder(nn.Module):
 
         x2 = self.Maxpool(x1)
         x2 = self.Conv2(x2)
+        
+        if self.dropout:
+            x2 = self.Drop(x2)
 
         x3 = self.Maxpool(x2)
         x3 = self.Conv3(x3)
+        
+        if self.dropout:
+            x3 = self.Drop(x3)
 
         x4 = self.Maxpool(x3)
         x4 = self.Conv4(x4)
+        
+        if self.dropout:
+            x4 = self.Drop(x4)
 
         x5 = self.Maxpool(x4)
         x5 = self.Conv5(x5)

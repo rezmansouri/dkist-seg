@@ -42,7 +42,7 @@ def main():
     val_loader = torch.utils.data.DataLoader(
         val_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=barlow_twins.collate)
 
-    encoder = model.UNetEncoder(img_ch=1, scale=4).to(device)
+    encoder = model.UNetEncoder(img_ch=1, scale=4, dropout=True).to(device)
 
     projector = model.Projector(4, 1024, 256, 128).to(device)
 
