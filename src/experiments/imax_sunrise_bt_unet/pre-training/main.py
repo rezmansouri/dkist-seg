@@ -16,9 +16,9 @@ def main():
     TRAIN_DIR = './data/train'
     VAL_DIR = './data/val'
     TRAIN_SIZE = 27_000
-    BATCH_SIZE = 512
+    BATCH_SIZE = 64
     VAL_SIZE = 3_000
-    N_EPOCHS = 100
+    N_EPOCHS = 20
     OUTPUT_PATH = './results'
 
     if not os.path.exists(OUTPUT_PATH):
@@ -42,15 +42,15 @@ def main():
     val_loader = torch.utils.data.DataLoader(
         val_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=barlow_twins.collate)
 
-    encoder = model.UNetEncoder(img_ch=1).to(device)
+    encoder = model.UNetEncoder(img_ch=1, scale=4).to(device)
 
-    projector = model.Projector(1024, 256, 128).to(device)
+    projector = model.Projector(4, 1024, 256, 128).to(device)
 
     criterion = barlow_twins.bt_loss
 
     params = list(encoder.parameters()) + list(projector.parameters())
 
-    optimizer = barlow_twins.LARS(params, lr=1e-3)
+    optimizer = torch.optim.Adam(params, lr=1e-6)#barlow_twins.LARS(params, lr=0)
 
     experiment_dir_name = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     OUTPUT_PATH = os.path.join(
