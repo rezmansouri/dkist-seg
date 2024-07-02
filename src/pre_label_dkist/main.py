@@ -104,10 +104,10 @@ def main():
         hdul = fits.open(os.path.join(DKIST_PATH, dkist))
         x = hdul[0].data.astype(np.float32)
         save_image(x, os.path.join(IMG_PATH, dkist[:-5]) + '.png')
-        # x = transform(x, reference)
-        # _768_mask_np = predict(model, x)
-        # _4096_mask_png = _768_mask_np_to_4096_mask_png(_768_mask_np)
-        # _4096_mask_png.save(os.path.join(OUT_PATH, dkist[:-5]) + '.png')
+        x = transform(x, reference)
+        _768_mask_np = predict(model, x)
+        _4096_mask_png = _768_mask_np_to_4096_mask_png(_768_mask_np)
+        _4096_mask_png.save(os.path.join(OUT_PATH, dkist[:-5]) + '.png')
     
 
 
