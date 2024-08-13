@@ -5,9 +5,9 @@
             margin: 20px 0;
         }
         .image-row img {
-            width: 50%; /* Adjust the width as needed */
+            width: 35%; /* Adjust the width as needed */
             height: auto;
-            margin: 5em; /* Optional: space between images */
+            margin: 10px; /* Optional: space between images */
         }
     </style>
 
