@@ -26,3 +26,5 @@ Week 7: 4 June - 11 June 2024: Labeling software tutorial
 [Week 11: 2 July - 9 July 2024](week_11.md)
 
 [Week 12/13/14/15: 9 July - 6 August 2024](week_12.md)
+
+[Week 16: 6 August - 13 August 2024](week_16.md)
