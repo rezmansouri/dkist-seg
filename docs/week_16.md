@@ -7,7 +7,7 @@
         .image-row img {
             width: 50%; /* Adjust the width as needed */
             height: auto;
-            margin: 20px; /* Optional: space between images */
+            margin: 5em; /* Optional: space between images */
         }
     </style>
 
