@@ -18,7 +18,7 @@
 
 <div class="image-row">
         <img src="resources/week_16/images.gif" alt="Image 1">
-        <img src="resources/week_16/maskss.gif" alt="Image 1">
+        <img src="resources/week_16/masksss.gif" alt="Image 1">
 </div>
 
 
