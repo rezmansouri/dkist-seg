@@ -29,7 +29,7 @@
 
 ### Problem:
 
-- There are frame-like pixels <img src="resources/week_16/frame.png"></img>
+- There are frame-like pixels <img src="resources/week_16/frame.png">
 
 - 96 pixels max
 
